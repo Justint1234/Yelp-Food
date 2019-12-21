@@ -1,12 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 const SearchScreen = () => {
-    return<View>
-        <Text>Search Screen</Text>
+  return (
+    <View style={styles.background}>
+      <Text>Search Screen</Text>
     </View>
+  );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  background: {
+    backgroundColor: '#F0EEEE',
+    height: 50,
+    borderRadius: 5,
+    marginHorizontal: 15,
+  },
+});
 
-export default SearchScreen; 
+export default SearchScreen;
