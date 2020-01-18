@@ -2,18 +2,23 @@ import React from 'react';
 import {View, TextInput, StyleSheet} from 'react-native';
 import AndroidIcon from 'react-native-vector-icons/FontAwesome';
 
-const SearchBar = () => {
+const SearchBar = ({term, onTermChange}) => {
   return (
     <View style={styles.background}>
       {/* <AndroidIcon styles={styles.iconStyle} name="search" size={40} /> */}
-      <TextInput style={styles.inputStyle} placeholder="Search" />
+      <TextInput 
+      style={styles.inputStyle} 
+      placeholder="Search" 
+      value={term}
+      onChangeText={newTerm => onTermChange(newTerm)}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   backgroundStyle: {
-    marginTop: 15,
+    marginTop: 10,
     backgroundColor: '#F0EEEE',
     height: 50,
     borderRadius: 5,
